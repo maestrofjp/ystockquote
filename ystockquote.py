@@ -26,7 +26,7 @@ except ImportError:
 
 
 def _request(symbol, stat):
-    url = 'http://finance.yahoo.com/d/quotes.csv?s=%s&f=%s' % (symbol, stat)
+    url = 'http://download.finance.yahoo.com/d/quotes.csv?s=%s&f=%s&e=.csv' % (symbol, stat,)
     req = Request(url)
     resp = urlopen(req)
     content = resp.read().decode().strip()
